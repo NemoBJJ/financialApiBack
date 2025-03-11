@@ -15,10 +15,9 @@ applications and has its own scalable infrastructure.
 ## 🚀 How to Run the Project
 
 # Clone the repository
-git clone https://github.com/NemoBJJ/EmployeeManagementAPI.git
+git clone https://github.com/NemoBJJ/financialApiBack
 
 # Navigate to the project folder
-cd EmployeeManagementAPI
 
 # Install dependencies 
 mvn install
