@@ -9,16 +9,17 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**") // Aplica CORS a todas as rotas sob /api
+        registry.addMapping("/**")
                 .allowedOrigins(
-                    "https://nemiapiingfinancial.netlify.app", // FrontEnd no Netlify
-                    "http://localhost:3002", // FrontEnd local
-                    "https://3.217.55.187:80", // IP da instância AWS
-                    "https://api1.neemindev.com", // Domínio do BackEnd
-                    "https://neemindev.com" // Novo domínio do FrontEnd
+                    "http://localhost:3003",
+                    "https://nemiapiingfinancial.netlify.app",
+                    "https://financialapiback.onrender.com",  // ← NOVA URL DO RENDER
+                    "https://3.217.55.187:80",
+                    "https://api1.neemindev.com",
+                    "https://neemindev.com"
                 )
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
-                .allowedHeaders("*") // Headers permitidos
-                .allowCredentials(true); // Permite credenciais (cookies, autenticação)
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 }
